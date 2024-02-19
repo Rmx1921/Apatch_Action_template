@@ -167,6 +167,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         echo " " >> arch/${{ env.ARCH }}/Kconfig
+        ls arch/arm64/Kconfig
         echo 'source "apatch/Kconfig"' >> arch/${{ env.ARCH }}/Kconfig
         echo "CONFIG_APATCH_SUPPORT=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
         echo "CONFIG_APATCH_FIX_MODULES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
